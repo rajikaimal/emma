@@ -6,7 +6,7 @@
 
 ### Setup ngrok
 
-Download and install (ngrok)[https://ngrok.com/download] 
+Download and install [ngrok](https://ngrok.com/download) 
 
 ### Setup GitHub webhook
 
