@@ -6,6 +6,7 @@ import json
 import subprocess
 import requests
 from flask import Flask, request, abort
+from blame import Blame
 
 app = Flask(__name__)
 
@@ -15,7 +16,9 @@ def payload():
 
 @app.route("/test", methods=["GET"])
 def test():
-    return "TEST ROUTE"
+    bl = Blame()
+    tst = bl.parse_blame("Hey !")
+    return tst
 
 if __name__ == "__main__":
     try:
