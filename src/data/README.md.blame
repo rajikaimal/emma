@@ -1,0 +1,2419 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+
+
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-67bdbbece8dab4e0407b1dc8edc4fc44c6ddd91aaf7a7dd69cac694b4cb761c4.css" integrity="sha256-Z7277OjatOBAex3I7cT8RMbd2Rqven3WnKxpS0y3YcQ=" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-82d26a01555805dfcbf0b92a2fed02dd7d26540fd1f58ec3c6f8a8e921600e1e.css" integrity="sha256-gtJqAVVYBd/L8LkqL+0C3X0mVA/R9Y7Dxvio6SFgDh4=" media="all" rel="stylesheet" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>react-scaffolder/README.md at master · 99xt/react-scaffolder</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta content="https://avatars2.githubusercontent.com/u/19850503?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="99xt/react-scaffolder" property="og:title" /><meta content="https://github.com/99xt/react-scaffolder" property="og:url" /><meta content="react-scaffolder - Scaffolding tool for React" property="og:description" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTYzNzE3ODUyOjE0OTE2ZGM3NGIxNzJmNGM3ZDkzNjdjMmVjNzVlOGVjOTg2MTdjODI1MTc2NjllMWRmZDNmMGE0NmY5MjMxNTE=--9c0d7ac74c06354338baafd7faf73352b92ddbd8">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="8C8B:596B:1219956:1B7A82F:58F128D6" data-pjax-transient>
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="8C8B:596B:1219956:1B7A82F:58F128D6" name="octolytics-dimension-request_id" /><meta content="8940086" name="octolytics-actor-id" /><meta content="rajikaimal" name="octolytics-actor-login" /><meta content="f9880d46819b42909c44f750c89b81774ca64007c30769c7459378794c70d64b" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/blame" data-pjax-transient="true" name="analytics-location" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+  <meta name="user-login" content="rajikaimal">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="YWYxNGQ0Y2RiYjkwZDdhMWZmN2Q5YTA2M2RmMzViNmE3NWRkMzNmZWZjZmE0YjI0ZGVhMTU1MjU3ZWM4NDA4ZHx7InJlbW90ZV9hZGRyZXNzIjoiMTEyLjEzNC40OC4xODEiLCJyZXF1ZXN0X2lkIjoiOEM4Qjo1OTZCOjEyMTk5NTY6MUI3QTgyRjo1OEYxMjhENiIsInRpbWVzdGFtcCI6MTQ5MjE5OTY0MCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+
+  <meta name="html-safe-nonce" content="0a18ecb2b912adaec9106c120f6443599b213a37">
+
+  <meta http-equiv="x-pjax-version" content="2048760621c79879f7a6f4a919ceb2e1">
+  
+
+    
+  <meta name="description" content="react-scaffolder - Scaffolding tool for React">
+  <meta name="go-import" content="github.com/99xt/react-scaffolder git https://github.com/99xt/react-scaffolder.git">
+
+  <meta content="19850503" name="octolytics-dimension-user_id" /><meta content="99xt" name="octolytics-dimension-user_login" /><meta content="66241977" name="octolytics-dimension-repository_id" /><meta content="99xt/react-scaffolder" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="66241977" name="octolytics-dimension-repository_network_root_id" /><meta content="99xt/react-scaffolder" name="octolytics-dimension-repository_network_root_nwo" />
+        <link href="https://github.com/99xt/react-scaffolder/commits/master.atom" rel="alternate" title="Recent Commits to react-scaffolder:master" type="application/atom+xml">
+
+
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  </head>
+
+  <body class="logged-in env-production full-width">
+    
+
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<div class="header" role="banner">
+  <div class="container clearfix">
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/99xt/react-scaffolder/search" class="js-site-search-form" data-scoped-search-url="/99xt/react-scaffolder/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+        <a href="/99xt/react-scaffolder/blame/master/README.md" class="header-search-scope no-underline">This repository</a>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        value=""
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+        <input type="hidden" class="js-site-search-type-field" name="type" >
+    </label>
+</form></div>
+
+
+      <ul class="header-nav float-left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" aria-label="Pull requests you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" aria-label="Issues you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav float-right" id="user-links">
+  <li class="header-nav-item">
+    
+    <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s js-socket-channel js-notification-indicator " data-channel="notification-changed:8940086" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+        <svg aria-hidden="true" class="octicon octicon-bell float-left" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
+</a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus float-left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"/></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="99xt/react-scaffolder">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/99xt/react-scaffolder/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/rajikaimal"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@rajikaimal" class="avatar" src="https://avatars2.githubusercontent.com/u/8940086?v=3&amp;s=40" height="20" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu dropdown-menu-sw">
+        <div class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">rajikaimal</strong>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/rajikaimal" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a>
+        <a class="dropdown-item" href="/rajikaimal?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a>
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JiOBAB4/oEKWbW7qbRbIrWUD53aT0d5FS426PZX7DbRpO9gtNtkgglNd7uuBgHCdfwvw7v8sfjmrUOAvSvWutw==" /></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </li>
+</ul>
+
+
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="sr-only right-0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="3XhB8jI7n0YR2ooE/8nsURNjOMDiBX0yH2q8eRsY20uSYBjfGt0fhtTqCgUTX1RhCWsvWI743U7/t+ZrxBZ4SA==" /></div>
+      <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+        Sign out
+      </button>
+</form>  </div>
+</div>
+
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+        
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+    <div class="container repohead-details-container">
+
+
+      <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="PwNoFEzWaahkYKSdHJcEXk+iwRS10erRMs9wDYSRG5r7OQwH1hAq4MNUzk0z/yaA2lcEVXV9dwD16VvvBDtpJw==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="66241977" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/99xt/react-scaffolder/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:blob#blame">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Unwatch
+            </span>
+          </a>
+          <a class="social-count js-social-count"
+            href="/99xt/react-scaffolder/watchers"
+            aria-label="4 users are watching this repository">
+            4
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+      <div class="js-toggler-container js-social-container starring-container on">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/99xt/react-scaffolder/unstar" class="starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="jthsK/JoLmSOSt+nwFj0IaH9A1L5HFkZ1Y5ZZxynW4mq7ratT3Bfztb8obpoEoBpl0GzSORqxmwFndWi2Vgt+Q==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar 99xt/react-scaffolder"
+        data-ga-click="Repository, click unstar button, action:blob#blame; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/99xt/react-scaffolder/stargazers"
+           aria-label="13 users starred this repository">
+          13
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/99xt/react-scaffolder/star" class="unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="YH8PoumoF3rUb6YEFbqVrVgoumUj2qSSZZN5upvn4CzpePayNw0mHa34wwfoZTFTTn9lG898TDnP32JQq8wbLQ==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star 99xt/react-scaffolder"
+        data-ga-click="Repository, click star button, action:blob#blame; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/99xt/react-scaffolder/stargazers"
+           aria-label="13 users starred this repository">
+          13
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="#fork-destination-box" class="btn btn-sm btn-with-count"
+              title="Fork your own copy of 99xt/react-scaffolder to your account"
+              aria-label="Fork your own copy of 99xt/react-scaffolder to your account"
+              rel="facebox"
+              data-ga-click="Repository, show fork modal, action:blob#blame; text:Fork">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src=""
+                class="js-fork-select-fragment fork-select-fragment"
+                data-url="/99xt/react-scaffolder/fork?fragment=1">
+              <img alt="Loading" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" />
+            </include-fragment>
+          </div>
+
+    <a href="/99xt/react-scaffolder/network" class="social-count"
+       aria-label="8 users forked this repository">
+      8
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/99xt" class="url fn" rel="author">99xt</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/99xt/react-scaffolder" data-pjax="#js-repo-pjax-container">react-scaffolder</a></strong>
+
+</h1>
+
+    </div>
+    <div class="container">
+      
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/99xt/react-scaffolder" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /99xt/react-scaffolder" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/99xt/react-scaffolder/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /99xt/react-scaffolder/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">7</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/99xt/react-scaffolder/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /99xt/react-scaffolder/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="/99xt/react-scaffolder/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /99xt/react-scaffolder/projects">
+      <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="counter">0</span>
+</a>
+    <a href="/99xt/react-scaffolder/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /99xt/react-scaffolder/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+
+  <a href="/99xt/react-scaffolder/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /99xt/react-scaffolder/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/99xt/react-scaffolder/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /99xt/react-scaffolder/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+    <a href="/99xt/react-scaffolder/settings" class="js-selected-navigation-item reponav-item" data-selected-links="repo_settings repo_branch_settings hooks integration_installations /99xt/react-scaffolder/settings">
+      <svg aria-hidden="true" class="octicon octicon-gear" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
+      Settings
+</a>
+</nav>
+
+    </div>
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+          
+<div class="wants-full-width-container"></div>
+
+<a href="/99xt/react-scaffolder/blame/99fc02b1486fcb3fe1bca427eaf76f761e361397/README.md" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<div class="breadcrumb css-truncate blame-breadcrumb js-zeroclipboard-container">
+  <span class="css-truncate-target js-zeroclipboard-target"><span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/99xt/react-scaffolder"><span>react-scaffolder</span></a></span></span><span class="separator">/</span><strong class="final-path">README.md</strong></span>
+  <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></button>
+</div>
+
+<div class="line-age-legend">
+  <span>Newer</span>
+  <ol>
+      <li class="heat" data-heat="1"></li>
+      <li class="heat" data-heat="2"></li>
+      <li class="heat" data-heat="3"></li>
+      <li class="heat" data-heat="4"></li>
+      <li class="heat" data-heat="5"></li>
+      <li class="heat" data-heat="6"></li>
+      <li class="heat" data-heat="7"></li>
+      <li class="heat" data-heat="8"></li>
+      <li class="heat" data-heat="9"></li>
+      <li class="heat" data-heat="10"></li>
+  </ol>
+  <span>Older</span>
+</div>
+
+<div class="file">
+  <div class="file-header">
+    <div class="file-actions">
+      <div class="BtnGroup">
+        <a href="/99xt/react-scaffolder/raw/master/README.md" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="/99xt/react-scaffolder/blob/master/README.md" class="btn btn-sm js-update-url-with-hash BtnGroup-item">Normal view</a>
+        <a href="/99xt/react-scaffolder/commits/master/README.md" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+      </div>
+    </div>
+
+
+
+    <div class="file-info">
+      <svg aria-hidden="true" class="octicon octicon-file-text" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path d="M6 5H2V4h4v1zM2 8h7V7H2v1zm0 2h7V9H2v1zm0 2h7v-1H2v1zm10-7.5V14c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V2c0-.55.45-1 1-1h7.5L12 4.5zM11 5L8 2H1v12h10V5z"/></svg>
+      <span class="file-mode" title="File Mode">100644</span>
+      <span class="file-info-divider"></span>
+        160 lines (100 sloc)
+        <span class="file-info-divider"></span>
+      4.08 KB
+    </div>
+  </div>
+
+  <div class="blob-wrapper">
+    <table class="blame-container highlight data js-file-line-container tab-size" data-tab-size="8">
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2017-02-04T03:01:47Z">Feb 4, 2017</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1e0cfd01f05395736961fda0d0a19b115f6f54bc" class="message" data-pjax="true" title="Fix broken link">Fix broken link</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/6269c9deea7a3603fd9c4f98828195893a5d8c33/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L1">1</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC1"><span class="pl-mh"><span class="pl-mh">#</span><span class="pl-mh"> </span>react-scaffolder ![<span class="pl-e">Dependency status</span>](https://david-dm.org/99xt/react-cli.svg) [![<span class="pl-e">Build Status</span>](https://travis-ci.org/99xt/react-scaffolder.svg?branch=master)](https://travis-ci.org/99xt/react-scaffolder)</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T05:38:25Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/cf3ec2252de902d7ea9bef47305ea58a48c47020/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L2">2</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC2"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-14T10:00:43Z">Oct 14, 2016</time-ago></span>
+              <a href="/gitter-badger" aria-label="gitter-badger" class="tooltipped tooltipped-e">
+                <img alt="@gitter-badger" class="avatar blame-commit-avatar" height="16" src="https://avatars3.githubusercontent.com/u/8518239?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/66fdb024ac0f6e007bda6e68d336631e05e7af92" class="message" data-pjax="true" title="Add Gitter badge">Add Gitter badge</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/8c508c51f919f6f25bb1b2ec75de16b1fe7efe3d/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L3">3</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC3">[![<span class="pl-e">Join the chat at https://gitter.im/react-scaffolder/Lobby</span>](https://badges.gitter.im/react-scaffolder/Lobby.svg)](https://gitter.im/react-scaffolder/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge)</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-29T05:18:19Z">Aug 29, 2016</time-ago></span>
+              <a href="/gitter-badger" aria-label="gitter-badger" class="tooltipped tooltipped-e">
+                <img alt="@gitter-badger" class="avatar blame-commit-avatar" height="16" src="https://avatars3.githubusercontent.com/u/8518239?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/dedefbc6fa71176c0de6e41f73275881f936d1ed" class="message" data-pjax="true" title="Add Gitter badge">Add Gitter badge</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/8c508c51f919f6f25bb1b2ec75de16b1fe7efe3d/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L4">4</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC4"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T16:29:22Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/98fce5888d12236cd3ef47f994f9cd7fa605f8ed" class="message" data-pjax="true" title="doc improvements">doc improvements</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/bcb154f5eb138612e0c6441d249872250d962ee7/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L5">5</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC5">Scaffolding tool for [<span class="pl-e">React</span>](https://facebook.github.io/react/)</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T05:38:25Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/cf3ec2252de902d7ea9bef47305ea58a48c47020/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L6">6</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC6"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-17T06:00:57Z">Oct 17, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/8360f30635b5f93498c26e3eacb3918066cec43e" class="message" data-pjax="true" title="update cli to scaffolder">update cli to scaffolder</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/424c532bb9001ef0618fc9bceb4057152e40eb71/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L7">7</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC7">react-scaffolder is a command line interface which brings smooth developer experience (DX) for React devs. react-scaffolder provides a better way to generate react projects with [<span class="pl-e">react-boilerplate</span>](https://github.com/99xt/react-boilerplate). With this tool it&#39;s possible to continue generating boilerplate code with heavy customizations once a project is initiated.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="4">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T05:38:25Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="4">
+                <a href="/99xt/react-scaffolder/blame/cf3ec2252de902d7ea9bef47305ea58a48c47020/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L8">8</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC8"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L9">9</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC9"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Install</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L10">10</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC10"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L11">11</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC11"><span class="pl-c1">```</span><span class="pl-s1"></span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-14T10:11:41Z">Oct 14, 2016</time-ago></span>
+              <a href="/chariths" aria-label="chariths" class="tooltipped tooltipped-e">
+                <img alt="@chariths" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/1312622?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/e28d317355bd49b11262544d5575ff1eeaeb8303" class="message" data-pjax="true" title="npm install -g react-scaffolder">npm install -g react-scaffolder</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/eae5ff914b1ae5bf89e74eddfff899d87373605e/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L12">12</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC12"><span class="pl-s1">$ npm install -g react-scaffolder</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L13">13</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC13"><span class="pl-s1"></span><span class="pl-c1">```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L14">14</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC14"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="7">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2017-02-05T04:19:15Z">Feb 5, 2017</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/a9c5ae96bd883cd570e1a733cbfd4dc8adf72641" class="message" data-pjax="true" title="Update README.md">Update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="7">
+                <a href="/99xt/react-scaffolder/blame/1e0cfd01f05395736961fda0d0a19b115f6f54bc/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L15">15</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC15">or if you&#39;re using [<span class="pl-e">yarn</span>](https://yarnpkg.com),</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L16">16</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC16"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L17">17</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC17"><span class="pl-c1">```</span><span class="pl-s1"></span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L18">18</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC18"><span class="pl-s1">$ yarn global add react-scaffolder</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L19">19</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC19"><span class="pl-s1"></span><span class="pl-c1">```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="3"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L20">20</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC20"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-12T10:18:10Z">Oct 12, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/97c8c7e42b968e4e733aeed8354869a3cda6df4d" class="message" data-pjax="true" title="add quick start guide">add quick start guide</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/85b1ad30e669999c4461be5f28532118e4e54b41/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L21">21</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC21"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Quick Start</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L22">22</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC22"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-17T06:00:57Z">Oct 17, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/8360f30635b5f93498c26e3eacb3918066cec43e" class="message" data-pjax="true" title="update cli to scaffolder">update cli to scaffolder</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/424c532bb9001ef0618fc9bceb4057152e40eb71/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L23">23</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC23">Quickest way to get up and running with react-scaffolder</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-12T10:18:10Z">Oct 12, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/97c8c7e42b968e4e733aeed8354869a3cda6df4d" class="message" data-pjax="true" title="add quick start guide">add quick start guide</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/85b1ad30e669999c4461be5f28532118e4e54b41/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L24">24</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC24"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-14T10:01:49Z">Oct 14, 2016</time-ago></span>
+              <a href="/chariths" aria-label="chariths" class="tooltipped tooltipped-e">
+                <img alt="@chariths" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/1312622?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/55100ffa883280a4e46942c8b52ad963c1aa17dc" class="message" data-pjax="true" title="changed project name in readme">changed project name in readme</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4e66f0e79ac2470291f4faccc2b1d768a3ff73f9/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L25">25</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC25"><span class="pl-v">-</span> Install the CLI - <span class="pl-c1">```$ npm install -g react-scaffolder```</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-14T10:08:39Z">Oct 14, 2016</time-ago></span>
+              <a href="/chariths" aria-label="chariths" class="tooltipped tooltipped-e">
+                <img alt="@chariths" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/1312622?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/3b88ff7fb4cb5ee9cb3bde32785227f0131827ee" class="message" data-pjax="true" title="changed gitter url">changed gitter url</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/55100ffa883280a4e46942c8b52ad963c1aa17dc/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L26">26</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC26"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="7">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-12T10:18:10Z">Oct 12, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/97c8c7e42b968e4e733aeed8354869a3cda6df4d" class="message" data-pjax="true" title="add quick start guide">add quick start guide</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="7">
+                <a href="/99xt/react-scaffolder/blame/85b1ad30e669999c4461be5f28532118e4e54b41/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L27">27</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC27"><span class="pl-v">-</span> Initiate a project - <span class="pl-c1">```$ react init awesome-project &amp;&amp; cd awesome-project```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L28">28</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC28"><span class="pl-v">-</span> Install dependencies - <span class="pl-c1">```$ npm install```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L29">29</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC29"><span class="pl-v">-</span> Run the build - <span class="pl-c1">```$ npm run build &amp;&amp; npm start```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L30">30</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC30"><span class="pl-v">-</span> Instantly create React components - <span class="pl-c1">```$ react g component feed footer```</span> </td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L31">31</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC31"><span class="pl-v">-</span> Check with interactive view - <span class="pl-c1">```$ react v -c```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L32">32</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC32"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T05:38:25Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/cf3ec2252de902d7ea9bef47305ea58a48c47020/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L33">33</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC33"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Usage</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L34">34</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC34"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="13">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="13">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L35">35</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC35"><span class="pl-mh"><span class="pl-mh">###</span><span class="pl-mh"> </span>react init [name]</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L36">36</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC36"><span class="pl-mi">*alias: i*</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L37">37</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC37"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L38">38</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC38"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>name</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L39">39</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC39"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L40">40</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC40">Project name.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L41">41</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC41"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L42">42</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC42"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>Options</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L43">43</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC43"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L44">44</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC44"><span class="pl-v">*</span> <span class="pl-c1">`-l`</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L45">45</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC45">Add eslint configuration.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L46">46</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC46"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:22:57Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/bc9060be54133f936969e35898bf025854d05b89" class="message" data-pjax="true" title="improvement">improvement</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/1987c71de6d05aea6f687bb04ef4ef341a856682/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L47">47</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC47"><span class="pl-c">---------------------------------------</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L48">48</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC48"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="12">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="12">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L49">49</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC49"><span class="pl-mh"><span class="pl-mh">###</span><span class="pl-mh"> </span>react generate component [module] [component]</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L50">50</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC50"><span class="pl-mi">*alias: g*</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L51">51</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC51"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L52">52</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC52"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>module</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L53">53</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC53"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L54">54</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC54">Module name where the react component should be placed within. (Subdirectory within components directory)</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L55">55</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC55"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L56">56</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC56"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>component</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L57">57</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC57"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L58">58</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC58">React component name.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L59">59</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC59"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:22:57Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/bc9060be54133f936969e35898bf025854d05b89" class="message" data-pjax="true" title="improvement">improvement</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/1987c71de6d05aea6f687bb04ef4ef341a856682/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L60">60</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC60"><span class="pl-c">---------------------------------------</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L61">61</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC61"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="14">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="14">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L62">62</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC62"><span class="pl-mh"><span class="pl-mh">###</span><span class="pl-mh"> </span>react generate test [module] [component]</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L63">63</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC63"><span class="pl-mi">*alias: g*</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L64">64</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC64"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L65">65</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC65">Create React component.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L66">66</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC66"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L67">67</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC67"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>module</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L68">68</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC68"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L69">69</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC69">Module name where the test file should be placed within. (Subdirectory within <span class="pl-mb">__tests__</span> directory)</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L70">70</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC70"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L71">71</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC71"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>component</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L72">72</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC72"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L73">73</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC73">Test file name.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L74">74</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC74"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:22:57Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/bc9060be54133f936969e35898bf025854d05b89" class="message" data-pjax="true" title="improvement">improvement</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/1987c71de6d05aea6f687bb04ef4ef341a856682/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L75">75</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC75"><span class="pl-c">---------------------------------------</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L76">76</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC76"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="14">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="14">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L77">77</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC77"><span class="pl-mh"><span class="pl-mh">###</span><span class="pl-mh"> </span>react view -c -t</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L78">78</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC78"><span class="pl-mi">*alias: v*</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L79">79</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC79"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L80">80</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC80">View react components and test files.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L81">81</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC81"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L82">82</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC82"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>Options</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L83">83</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC83"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L84">84</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC84"><span class="pl-v">*</span> <span class="pl-c1">`-c`</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L85">85</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC85">View React components file directory.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L86">86</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC86"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L87">87</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC87"><span class="pl-v">*</span> <span class="pl-c1">`-t`</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L88">88</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC88">View tests file directory.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L89">89</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC89"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L90">90</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC90"><span class="pl-mh"><span class="pl-mh">###</span><span class="pl-mh"> </span>react config [key] [value]</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T14:58:13Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5ed26989a2ca497e45d06b85a3473ecac4d44915" class="message" data-pjax="true" title="fix typos">fix typos</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4cc8eaba7070e6fa2d63aa3ba9e21d26b98a0c6e/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L91">91</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC91"><span class="pl-mi">*alias: c*</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L92">92</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC92"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T16:29:22Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/98fce5888d12236cd3ef47f994f9cd7fa605f8ed" class="message" data-pjax="true" title="doc improvements">doc improvements</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/bcb154f5eb138612e0c6441d249872250d962ee7/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L93">93</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC93">Change configuration in <span class="pl-c1">`.reactclirc`</span>.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="5">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="5">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L94">94</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC94"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L95">95</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC95"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>key</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L96">96</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC96"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L97">97</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC97">Key for configuration</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T16:29:22Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/98fce5888d12236cd3ef47f994f9cd7fa605f8ed" class="message" data-pjax="true" title="doc improvements">doc improvements</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/bcb154f5eb138612e0c6441d249872250d962ee7/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L98">98</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC98">example: <span class="pl-c1">`client`</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="5">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="5">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L99">99</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC99"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L100">100</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC100"><span class="pl-mh"><span class="pl-mh">####</span><span class="pl-mh"> </span>value</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L101">101</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC101"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L102">102</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC102">Value for configuration</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T16:29:22Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/98fce5888d12236cd3ef47f994f9cd7fa605f8ed" class="message" data-pjax="true" title="doc improvements">doc improvements</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/bcb154f5eb138612e0c6441d249872250d962ee7/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L103">103</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC103">example: <span class="pl-c1">`src`</span> (source directory)</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="7">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="7">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L104">104</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC104"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L105">105</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC105"><span class="pl-c">---------------------------------------</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L106">106</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC106"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L107">107</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC107"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Configuring existing projects</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L108">108</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC108"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L109">109</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC109">To use react-cli in existing React project navigate to directory where React components are created.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-10T14:58:13Z">Oct 10, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5ed26989a2ca497e45d06b85a3473ecac4d44915" class="message" data-pjax="true" title="fix typos">fix typos</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4cc8eaba7070e6fa2d63aa3ba9e21d26b98a0c6e/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L110">110</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC110">Create react-cli configuration file, <span class="pl-c1">`.reactclirc`</span> (similar to <span class="pl-c1">`.babelrc`</span>). Add configuration in key value pairs.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="10">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:56:16Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/d90c347208aa83e8a7c4782dad765cc4c4ee7cdf" class="message" data-pjax="true" title="configuration docs">configuration docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="10">
+                <a href="/99xt/react-scaffolder/blame/6a87c838584ca18e3cf79b1c2b86d5c166a714a5/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L111">111</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC111"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L112">112</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC112"><span class="pl-c1">```</span><span class="pl-s1"></span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L113">113</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC113"><span class="pl-s1">{</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L114">114</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC114"><span class="pl-s1">	&quot;client&quot;: &quot;src&quot; </span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L115">115</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC115"><span class="pl-s1">}</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L116">116</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC116"><span class="pl-s1"></span><span class="pl-c1">```</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L117">117</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC117"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L118">118</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC118">This specifies that React components are placed in <span class="pl-c1">`src/components`</span> directory.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L119">119</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC119"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:22:57Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/bc9060be54133f936969e35898bf025854d05b89" class="message" data-pjax="true" title="improvement">improvement</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/1987c71de6d05aea6f687bb04ef4ef341a856682/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L120">120</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC120"><span class="pl-c">---------------------------------------</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L121">121</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC121"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L122">122</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC122"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Features</span></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T06:24:40Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/9aebdaf9a2b50f3a1ff6b3ad0b928338e8938eae" class="message" data-pjax="true" title="add references, developer workflow">add references, developer workflow</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L123">123</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC123"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="5">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:20:13Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/1987c71de6d05aea6f687bb04ef4ef341a856682" class="message" data-pjax="true" title="add docs">add docs</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="5">
+                <a href="/99xt/react-scaffolder/blame/4a11c51a7f6eb30849b2952d4a5dd41025f82fa2/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L124">124</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC124"><span class="pl-v">-</span> Initiate React projects</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L125">125</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC125"><span class="pl-v">-</span> Create React components</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L126">126</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC126"><span class="pl-v">-</span> Create test files</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L127">127</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC127"><span class="pl-v">-</span> Interactive view of the component structure</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T06:24:40Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/9aebdaf9a2b50f3a1ff6b3ad0b928338e8938eae" class="message" data-pjax="true" title="add references, developer workflow">add references, developer workflow</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L128">128</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC128"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="12">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2017-03-13T17:50:54Z">Mar 13, 2017</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/b99e3c0281e69f750b886dd1258e39dac730b6d5" class="message" data-pjax="true" title="[Docs] add future works section">[Docs] add future works section</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="12">
+                <a href="/99xt/react-scaffolder/blame/33efab80b35ab4c3949251a968a857b230354246/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L129">129</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC129"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Future work</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L130">130</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC130"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L131">131</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC131">&lt;img src=&quot;http://i.imgur.com/ev03Gqg.png&quot; width=&quot;100%&quot;/&gt;</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L132">132</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC132"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L133">133</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC133">Above is the architecture proposed to decompose existing APIs in react-scaffolder. According to the architecture following components together will form the react scaffolder eco-system.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L134">134</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC134"><span class="pl-v">-</span> React CLI</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L135">135</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC135"><span class="pl-v">-</span> React generator core</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L136">136</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC136"><span class="pl-v">-</span> React generator addons</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L137">137</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC137"><span class="pl-v">-</span> Electron client</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L138">138</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC138"><span class="pl-v">-</span> Middlware and web client</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="2"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L139">139</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC139"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T06:24:40Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/9aebdaf9a2b50f3a1ff6b3ad0b928338e8938eae" class="message" data-pjax="true" title="add references, developer workflow">add references, developer workflow</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L140">140</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC140"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>References</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L141">141</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC141"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T08:13:04Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5ba280e618a5b3a518d49881df1c088c73c9537e" class="message" data-pjax="true" title="Update README.md">Update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/2048bc52941b547f5af1a6cc4a88677de7a9e970/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L142">142</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC142"><span class="pl-v">-</span> [<span class="pl-e">What is scaffolding ?</span>](https://en.wikipedia.org/wiki/Scaffold_(programming))</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="6">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T06:24:40Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/9aebdaf9a2b50f3a1ff6b3ad0b928338e8938eae" class="message" data-pjax="true" title="add references, developer workflow">add references, developer workflow</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="6">
+                <a href="/99xt/react-scaffolder/blame/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L143">143</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC143"><span class="pl-v">-</span> [<span class="pl-e">What is a CLI ?</span>](https://www.techopedia.com/definition/3337/command-line-interface-cli)</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L144">144</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC144"><span class="pl-v">-</span> [<span class="pl-e">Why good UX in CLIs matters</span>](https://trevorsullivan.net/2016/07/11/designing-command-line-tools/)</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L145">145</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC145"><span class="pl-v">-</span> Projects with similar objectives</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L146">146</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC146"> <span class="pl-v">-</span> [<span class="pl-e">Yeoman</span>](http://yeoman.io/)</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L147">147</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC147"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="4">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:30:34Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/4bebadc31c7a524a286433ef0d9ff4d26d91392b" class="message" data-pjax="true" title="more info on contributing guidelines">more info on contributing guidelines</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="4">
+                <a href="/99xt/react-scaffolder/blame/bc9060be54133f936969e35898bf025854d05b89/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L148">148</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC148"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>Contributor guidelines</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L149">149</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC149"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L150">150</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC150"><span class="pl-v">-</span> Fork the repository.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:31:48Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/71ed0c97fba2ce48338f07e5ce71e1311bdb62b4" class="message" data-pjax="true" title="fix typos">fix typos</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4bebadc31c7a524a286433ef0d9ff4d26d91392b/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L151">151</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC151"><span class="pl-v">-</span> Clone the forked repository.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:30:34Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/4bebadc31c7a524a286433ef0d9ff4d26d91392b" class="message" data-pjax="true" title="more info on contributing guidelines">more info on contributing guidelines</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/bc9060be54133f936969e35898bf025854d05b89/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L152">152</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC152"><span class="pl-v">-</span> Create your own branch.</td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L153">153</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC153"><span class="pl-v">-</span> Create tests and make sure tests pass on travis.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:31:48Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/71ed0c97fba2ce48338f07e5ce71e1311bdb62b4" class="message" data-pjax="true" title="fix typos">fix typos</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/4bebadc31c7a524a286433ef0d9ff4d26d91392b/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L154">154</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC154"><span class="pl-v">-</span> Create a pull request with changes made.</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="3">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T16:30:34Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/4bebadc31c7a524a286433ef0d9ff4d26d91392b" class="message" data-pjax="true" title="more info on contributing guidelines">more info on contributing guidelines</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="3">
+                <a href="/99xt/react-scaffolder/blame/bc9060be54133f936969e35898bf025854d05b89/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L155">155</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC155"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L156">156</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC156">For more information refer [<span class="pl-e">CONTRIBUTING.md</span>](https://github.com/99xt/react-cli/blob/master/CONTRIBUTING.md)</td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="4">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-08-22T05:38:25Z">Aug 22, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/5d01e5e8e1ae9957ccdc412fe2914fb3f1cf64ee" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="4">
+                <a href="/99xt/react-scaffolder/blame/cf3ec2252de902d7ea9bef47305ea58a48c47020/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L157">157</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC157"></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L158">158</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC158"><span class="pl-mh"><span class="pl-mh">##</span><span class="pl-mh"> </span>License</span></td>
+            </tr>
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="10"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L159">159</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC159"></td>
+            </tr>
+        </tbody>
+        <tbody class="blame-hunk">
+          <tr class="blame-commit">
+            <td class="blame-commit-info" rowspan="2">
+              <span class="blame-commit-date text-gray-light"><time-ago datetime="2016-10-09T17:47:18Z">Oct 9, 2016</time-ago></span>
+              <a href="/rajikaimal" aria-label="rajikaimal" class="tooltipped tooltipped-e">
+                <img alt="@rajikaimal" class="avatar blame-commit-avatar" height="16" src="https://avatars1.githubusercontent.com/u/8940086?v=3&amp;s=32" width="16" />
+</a>              <span class="blame-commit-title">
+                  <a href="/99xt/react-scaffolder/commit/230c60cadb4f72e30d1ef26b01f7483cb1c4d9d5" class="message" data-pjax="true" title="update README.md">update README.md</a>
+              </span>
+            </td>
+            <td class="blob-reblame" rowspan="2">
+                <a href="/99xt/react-scaffolder/blame/71ed0c97fba2ce48338f07e5ce71e1311bdb62b4/README.md"
+                  aria-label="View blame prior to this change" class="reblame-link tooltipped tooltipped-w">
+                  <svg aria-hidden="true" class="octicon octicon-versions" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M13 3H7c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 8H8V5h4v6zM4 4h1v1H4v6h1v1H4c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1zM1 5h1v1H1v4h1v1H1c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1z"/></svg>
+                </a>
+            </td>
+          </tr>
+
+            <tr class="blame-line">
+              <td class="line-age heat" data-heat="8"></td>
+              <td class="blob-num blame-blob-num js-line-number" id="L160">160</td>
+              <td class="blob-code blob-code-inner js-file-line" id="LC160">MIT © [<span class="pl-e">99XT</span>](https://github.com/99xt)</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2017 <span title="0.34826s from github-fe-bbb28be.cp1-iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" integrity="sha256-ikMY/+oJoM24IUt2zykmufagztMYoxe+1BnbGSFMaQ0=" src="https://assets-cdn.github.com/assets/compat-8a4318ffea09a0cdb8214b76cf2926b9f6a0ced318a317bed419db19214c690d.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-bRCeda2EcbpBUIJybADDX7kpzquXUIJJKDXxHsqMB9k=" src="https://assets-cdn.github.com/assets/frameworks-6d109e75ad8471ba415082726c00c35fb929ceab975082492835f11eca8c07d9.js"></script>
+    <script async="async" crossorigin="anonymous" integrity="sha256-IloiriQg40qyPGpBMQQNF8DOryIzkuxVdkGoQS45GiM=" src="https://assets-cdn.github.com/assets/github-225a22ae2420e34ab23c6a4131040d17c0ceaf223392ec557641a8412e391a23.js"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+
+  </body>
+</html>
+
