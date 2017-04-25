@@ -23,7 +23,6 @@ def parse_diff(path, branch='master'):
     temp_commit = {
         'commit': None
     }
-
     # Iterate through every commit for the given branch in the repository
     for commit in repo.iter_commits(branch):
         # Determine the parent of the commit to diff against.
@@ -31,15 +30,17 @@ def parse_diff(path, branch='master'):
         # Then create a mapping of path to diff for each file changed.
         
         parent = commit.parents[0] if commit.parents else EMPTY_TREE_SHA
+
         diffs  = {
             diff.a_path: diff for diff in commit.diff(parent)
         }
-
+  
         # r_git.diff(temp_commit['commit'], commit)
         # print(r_git.diff(temp_commit['commit'], commit))
+        # print(commit)
         raw_diff = r_git.diff(temp_commit['commit'], commit)
         parsed_diff = parse_raw_diff(raw_diff)
-
+        # print('Parsed diff ' + str(parsed_diff))
         temp_commit['commit'] = commit
         # print(temp_commit['commit'])
         
@@ -62,6 +63,9 @@ def parse_diff(path, branch='master'):
                 'object': os.path.join(path, objpath),
                 'commit': commit.hexsha,
                 'author': commit.author.email,
+                'file_names': parsed_diff['file_names'],
+                'added_lines': parsed_diff['added_lines'],
+                'deleted_lines': parsed_diff['deleted_lines'],
                 'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
                 'type': diff_type(diff),
             })
@@ -82,36 +86,77 @@ def parse_raw_diff(raw_diff):
     """
     Parse raw diff from git, identify added, deleted, changed lines
     """
-
     raw_diff_lines = raw_diff.splitlines()
-    # print(raw_diff)
-    # print(raw_diff_lines)
-    # temp Dict to hold meta info to identify different types of lines ie: added, deleted
-    temp_data = {
-        'diff': False,
-        'line_data': None, # at runtime this will be replaced by a Dict contains : no, start, end
-        'lines': None # at runtime this will be replaced by a Dict
+    # structures to hold values at runtime
+    file_names = []
+    deleted_lines = []
+    added_lines = []
+    last_deleted_line = 0
+    last_added_line = 0
+    current_line = 0
+    
+    glob_from_line = 0
+    new_file = False
+
+    for line in raw_diff_lines:
+        
+        if(line.startswith('diff --git')):
+            is_diff = False
+            # last_deleted_line = 0
+            glob_from_line = 0
+            last_added_line = 0
+            current_line = 0
+            glob_from_line = 0
+
+        # match line changes --- && +++
+        # if(line.startswith('--- ')):
+        #     is_diff = True
+        # elif(line.startswith('+++ ')):
+        #     is_diff = True
+        # else:
+        #     is_diff = False
+
+        # match line numbers
+        if(line.startswith('@@')):
+            # match following pattern => @@ -1,21 +0,0
+            re_compile = re.compile('@@ -(\d+),?(\d+)? \+(\d+),?(\d+)?')
+            matches = re_compile.findall(line)
+            # extract types of lines
+            from_line = matches[0][0]
+            glob_from_line = int(from_line) + 3
+            from_count = matches[0][1]
+            to_line = matches[0][2]
+            to_count = matches[0][3]
+            current_line += 1
+            continue
+            # check for deleted lines
+        if(line.startswith('---') or line.startswith('+++')):
+            current_line += 1
+            re_compile = re.compile('--- a/(\w+)')
+            matches = re_compile.findall(line)
+            for file_name_match in matches:
+                file_names.append(file_name_match)
+            continue
+        if(line.startswith('-')):
+            last_deleted_line += 1
+            deleted_lines.append(glob_from_line)
+            last_deleted_line += 1
+        if(line.startswith('+')):
+            last_added_line += 1
+            # added_lines.append({
+            #     'from': glob_from_line,
+            #     'no': last_added_line
+            # })
+            added_lines.append(glob_from_line)
+
+        current_line += 1
+        glob_from_line += 1
+            
+    return {
+        'file_names': file_names,
+        'deleted_lines': deleted_lines,
+        'added_lines': added_lines
     }
 
-    current_line = 0
-    for line in raw_diff_lines:
-        if(line.startswith('--- ')):
-            temp_data['diff'] = True
-            temp_data['line_data'] = {
-                'no': 2
-            }
-        elif(line.startswith('+++ ')):
-            temp_data['diff'] = True
-            temp_data['line_data'] = {
-                'no': 2
-            }
-    # pattern = re.compile('diff --git')
-    # match = bool(pattern.match(raw_diff))
-    # if match:
-    #     print('yeah')
-    # else:
-    #     print('nah')
-    return raw_diff
-
-for diff_info in parse_diff('/home/rajika/react-scaffolder'):
+for diff_info in parse_diff('/home/rajika/projects/g-test'):
     print(diff_info)
