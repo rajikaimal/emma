@@ -2,12 +2,13 @@ import pandas as pd
 import io
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as plt
 from sklearn.naive_bayes import MultinomialNB
+
 
 class Predict:
 	# path to current directory
@@ -15,6 +16,10 @@ class Predict:
 
 	# train ML model with repository specific data
 	def train(self, test_vector):
+		"""
+		Trains the classfier with extracted data from the repository commits
+		using the extractor
+		"""
 		train_data = np.genfromtxt(self.PATH + '/src/data/train_react.csv', delimiter=',', skip_header=1)
 		X = train_data[:, :2]
 		y = train_data[:, 2:]
@@ -24,15 +29,13 @@ class Predict:
 		# multi label binarizer to convert iterable of iterables into processing format
 		mlb = MultiLabelBinarizer()
 		y_enc = mlb.fit_transform(y)
+
 		# train_vector = svm.LinearSVC(C=C)
-
-
 		train_vector = OneVsRestClassifier(svm.SVC(probability=True))
 		# train_vector = OneVsRestClassifier(MultinomialNB())
 		# train_vector = svm.SVC(kernel='linear')
 		classifier_rbf = train_vector.fit(X, y_enc)
 		# todo use pickle to persist
-		
 		test_vector_reshaped = np.array(test_vector.ravel()).reshape((1, -1))
 		prediction = classifier_rbf.predict(test_vector_reshaped)
 
@@ -41,13 +44,7 @@ class Predict:
 		# print(X[:, :1])
 		# print(X[:, 1:])
 
-		# visualize commit with ghusernames
-
-		# plt.scatter(X[:, :1], X[:, 1:], c=y[:, :1], cmap=plt.cm.coolwarm)
-		# plt.xlabel('Commits')
-		# plt.ylabel('Reviewer')
-		# plt.title('GitHub PR reviewer selection')
-		# plt.show()
+		# self.visualize(X, y)
 
 		# h = .02  # step size in the mesh
 		 
@@ -88,5 +85,13 @@ class Predict:
 
 		return X
 
+	def visualize(self, X, y):
+		# visualize commit with ghusernames
+		plt.scatter(X[:, :1], X[:, 1:], c=y[:, :1], cmap=plt.cm.coolwarm)
+		plt.xlabel('Commits')
+		plt.ylabel('Reviewer')
+		plt.title('GitHub PR reviewer selection')
+		plt.show()		
+
 pr = Predict()
-pr.train(np.array([9, 1.2]))
+pr.train(np.array([11, 1]))
