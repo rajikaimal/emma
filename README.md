@@ -28,7 +28,7 @@ $ bash ./init.sh
 
 #### /payload
 
-## Programatic API
+## Programmatic API
 
 ```py
 from emma import Parser
