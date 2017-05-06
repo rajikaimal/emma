@@ -12,12 +12,12 @@ class Extract:
 		Repo.clone_from(repo_name, destination)
 
 	# get parsed .diff file
-	def get_parsed_diff(self):
+	def get_parsed_diff(self, repo_path):
 		prev_commiter = None
 		parser = Parser()
 		full_path = os.path.dirname(
             os.path.realpath(__file__))
-		for diff_info in parser.parse_diff('/home/rajika/projects/react-scaffolder'):
+		for diff_info in parser.parse_diff(repo_path):
 			print(diff_info)
 			with open(full_path + '/data/train_emma.csv', 'a') as csv_file:
 			    writer = csv.writer(csv_file)
@@ -33,4 +33,4 @@ class Extract:
 			       			prev_commiter = diff_info['author']
 
 ex = Extract()
-ex.get_parsed_diff()
+ex.get_parsed_diff('/home/rajika/projects/babel-bot')
