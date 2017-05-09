@@ -6,19 +6,29 @@ import json
 import subprocess
 import requests
 from flask import Flask, request, abort
-from blame import Blame
+from extract import Extract
+from predict import Predict
+
 
 app = Flask(__name__)
 
 @app.route("/payload", methods=["POST"])
 def payload():
     print(request.json)
+    exrt = Extract()
+    prdt = Predict()
 
-@app.route("/test", methods=["GET"])
-def test():
-    bl = Blame()
-    tst = bl.parse_blame("Hey !")
-    return tst
+    ex.get_parsed_diff('/home/rajika/projects/prepack')
+    prdt.train([{'file': 'src', 'line': '8', 'timestamp': '2017-04-24T17:07:51-0700'}])
+    
+    return app.response_class(['Ok', 'Fine'], content_type='application/json')
+
+
+# @app.route("/test", methods=["GET"])
+# def test():
+#     parse = Parse()
+#     diff = parse.parse_diff_file("/data/001.diff")
+#     return app.response_class(json.dumps(diff), content_type='application/json')
 
 if __name__ == "__main__":
     try:
