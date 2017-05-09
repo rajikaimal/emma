@@ -110,14 +110,6 @@ class Parser:
                 current_line = 0
                 glob_from_line = 0
 
-            # match line changes --- && +++
-            # if(line.startswith('--- ')):
-            #     is_diff = True
-            # elif(line.startswith('+++ ')):
-            #     is_diff = True
-            # else:
-            #     is_diff = False
-
             # match line numbers
             if(line.startswith('@@')):
                 # match following pattern => @@ -1,21 +0,0
@@ -159,5 +151,3 @@ class Parser:
             'deleted_lines': deleted_lines,
             'added_lines': added_lines
         }
-
-parser = Parser()
