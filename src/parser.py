@@ -41,7 +41,9 @@ class Parser:
             # print(r_git.diff(temp_commit['commit'], commit))
             # print(commit)
             raw_diff = r_git.diff(temp_commit['commit'], commit)
+            # print(raw_diff)
             parsed_diff = self.parse_raw_diff(raw_diff)
+            # print(parsed_diff)
             # print('Parsed diff ' + str(parsed_diff))
             temp_commit['commit'] = commit
             # print(temp_commit['commit'])
@@ -61,16 +63,28 @@ class Parser:
                             break
 
                 # Update the stats with the additional information
-                stats.update({
-                    'object': os.path.join(path, objpath),
-                    'commit': commit.hexsha,
-                    'author': commit.author.email,
-                    'file_names': parsed_diff['file_names'],
-                    'added_lines': parsed_diff['added_lines'],
-                    'deleted_lines': parsed_diff['deleted_lines'],
-                    'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
-                    'type': self.diff_type(diff),
-                })
+                # print(parsed_diff)
+                for diffa in parsed_diff:
+                    stats.update({
+                        'object': os.path.join(path, objpath),
+                        'commit': commit.hexsha,
+                        'author': commit.author.email,
+                        'file_names': diffa['file_names'],
+                        'added_lines': diffa['added_lines'],
+                        'deleted_lines': diffa['deleted_lines'],
+                        'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
+                        'type': self.diff_type(diff),
+                    })                    
+                # stats.update({
+                #     'object': os.path.join(path, objpath),
+                #     'commit': commit.hexsha,
+                #     'author': commit.author.email,
+                #     'file_names': parsed_diff['file_names'],
+                #     'added_lines': parsed_diff['added_lines'],
+                #     'deleted_lines': parsed_diff['deleted_lines'],
+                #     'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
+                #     'type': self.diff_type(diff),
+                # })
 
                 yield stats
 
@@ -90,6 +104,8 @@ class Parser:
         """
         raw_diff_lines = raw_diff.splitlines()
         # structures to hold values at runtime
+        diffs_data = []
+
         file_names = []
         deleted_lines = []
         added_lines = []
@@ -97,6 +113,8 @@ class Parser:
         last_added_line = 0
         current_line = 0
         
+        current_file = None
+
         glob_from_line = 0
         new_file = False
 
@@ -125,11 +143,14 @@ class Parser:
                 continue
                 # check for deleted lines
             if(line.startswith('---') or line.startswith('+++')):
+                # >>>>>>>>>>>>>>>>>> todo match rest of the string eg : /src/index.js
                 current_line += 1
                 re_compile = re.compile('--- a/(\w+)')
                 matches = re_compile.findall(line)
+
                 for file_name_match in matches:
                     file_names.append(file_name_match)
+                    # print(file_names)
                 continue
             if(line.startswith('-')):
                 last_deleted_line += 1
@@ -143,11 +164,19 @@ class Parser:
                 # })
                 added_lines.append(glob_from_line)
 
+            diffs_data.append({
+                'file_names': file_names,
+                'deleted_lines': deleted_lines,
+                'added_lines': added_lines
+            })
+
             current_line += 1
             glob_from_line += 1
-                
-        return {
-            'file_names': file_names,
-            'deleted_lines': deleted_lines,
-            'added_lines': added_lines
-        }
+
+        # print(diffs_data)
+        return diffs_data
+        # return {
+        #     'file_names': file_names,
+        #     'deleted_lines': deleted_lines,
+        #     'added_lines': added_lines
+        # }
