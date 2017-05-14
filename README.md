@@ -16,7 +16,9 @@ $ ./ngork http [port]
 
 ### Setup GitHub webhook
 
-> TODO
+Goto Repository -> `Settings` -> `Webhooks` -> `Add webhook`
+
+Add `Payload URL` from `ngrok` public URL. Click on `Add webhook`
 
 ### Add configuration file
 
@@ -50,6 +52,7 @@ parser = Parser()
 
 # parse local diff file - returns a generator
 parsed_diff = parser.parse_diff('/home/rajika/projects/sublime-vmd', 'master')
+print(parsed_diff)
 
 # parse raw diff to get following dict
 #  {
@@ -59,6 +62,18 @@ parsed_diff = parser.parse_diff('/home/rajika/projects/sublime-vmd', 'master')
 #  }
 
 parsed_raw_diff = parser.parse_raw_diff(raw_diff)
+
+```
+
+```py
+from emma import Parser
+
+# create parser object
+parser = Parser()
+
+# parse diff from GitHub diff
+parsed_diff = parser.get_pr_diff('https://patch-diff.githubusercontent.com/raw/facebook/react/pull/3.diff')
+print(parsed_diff)
 
 ```
 
