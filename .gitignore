@@ -1,3 +1,4 @@
 __pycache__
 tags
 src/data/train_emma.csv
+src/config/config_details.ini
