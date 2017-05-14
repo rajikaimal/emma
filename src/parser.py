@@ -21,7 +21,6 @@ class Parser:
         repo = git.Repo(path)
         r_git = repo.git
         # t = repo.head.commit.tree
-        # print(repo.git.diff('HEAD~1'))
         temp_commit = {
             'commit': None
         }
@@ -38,15 +37,9 @@ class Parser:
             }
       
             # r_git.diff(temp_commit['commit'], commit)
-            # print(r_git.diff(temp_commit['commit'], commit))
-            # print(commit)
             raw_diff = r_git.diff(temp_commit['commit'], commit)
-            # print(raw_diff)
             parsed_diff = self.parse_raw_diff(raw_diff)
-            # print(parsed_diff)
-            # print('Parsed diff ' + str(parsed_diff))
             temp_commit['commit'] = commit
-            # print(temp_commit['commit'])
             
             # The stats on the commit is a summary of all the changes for this
             # commit, we'll iterate through it to get the information we need.
@@ -63,28 +56,17 @@ class Parser:
                             break
 
                 # Update the stats with the additional information
-                # print(parsed_diff)
-                for diffa in parsed_diff:
+                for indv_diff in parsed_diff:
                     stats.update({
                         'object': os.path.join(path, objpath),
                         'commit': commit.hexsha,
                         'author': commit.author.email,
-                        'file_names': diffa['file_names'],
-                        'added_lines': diffa['added_lines'],
-                        'deleted_lines': diffa['deleted_lines'],
+                        'file_name': indv_diff['file_name'],
+                        'added_lines': indv_diff['added_lines'],
+                        'deleted_lines': indv_diff['deleted_lines'],
                         'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
                         'type': self.diff_type(diff),
-                    })                    
-                # stats.update({
-                #     'object': os.path.join(path, objpath),
-                #     'commit': commit.hexsha,
-                #     'author': commit.author.email,
-                #     'file_names': parsed_diff['file_names'],
-                #     'added_lines': parsed_diff['added_lines'],
-                #     'deleted_lines': parsed_diff['deleted_lines'],
-                #     'timestamp': commit.authored_datetime.strftime(DATE_TIME_FORMAT),
-                #     'type': self.diff_type(diff),
-                # })
+                    })
 
                 yield stats
 
@@ -118,8 +100,11 @@ class Parser:
         glob_from_line = 0
         new_file = False
 
+        temp_count = 0
+
         for line in raw_diff_lines:
-            
+            temp_count = temp_count + 1
+
             if(line.startswith('diff --git')):
                 is_diff = False
                 # last_deleted_line = 0
@@ -150,33 +135,41 @@ class Parser:
 
                 for file_name_match in matches:
                     file_names.append(file_name_match)
+                    # print('New file !')
+                    diffs_data.append({
+                        'file_name': file_name_match,
+                        'added_lines': [],
+                        'deleted_lines': []
+                    })
+
+                    current_file = file_name_match
                     # print(file_names)
                 continue
             if(line.startswith('-')):
                 last_deleted_line += 1
-                deleted_lines.append(glob_from_line)
+                # if file_name_match in file_names:
+                for diffy in diffs_data:
+                    # to be removed
+                    if diffy['file_name'] == current_file:
+                        diffy['deleted_lines'].append(glob_from_line)
+                    else:
+                        diffy['deleted_lines'].append(glob_from_line)
+                # else:
+                #     deleted_lines.append(glob_from_line)
                 last_deleted_line += 1
             if(line.startswith('+')):
                 last_added_line += 1
-                # added_lines.append({
-                #     'from': glob_from_line,
-                #     'no': last_added_line
-                # })
+                # if file_name_match in file_names:
+                for diffy in diffs_data:
+                    if diffy['file_name'] == current_file:
+                        diffy['added_lines'].append(glob_from_line)
+                    else:
+                        diffy['added_lines'].append(glob_from_line)
+                # else:
+                #     deleted_lines.append(glob_from_line)
                 added_lines.append(glob_from_line)
-
-            diffs_data.append({
-                'file_names': file_names,
-                'deleted_lines': deleted_lines,
-                'added_lines': added_lines
-            })
 
             current_line += 1
             glob_from_line += 1
 
-        # print(diffs_data)
         return diffs_data
-        # return {
-        #     'file_names': file_names,
-        #     'deleted_lines': deleted_lines,
-        #     'added_lines': added_lines
-        # }
