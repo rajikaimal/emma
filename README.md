@@ -18,6 +18,18 @@ $ ./ngork http [port]
 
 > TODO
 
+### Add configuration file
+
+```
+[Credentials]
+username = *********
+password = *********
+
+[Repository]
+org = *********
+repo = *********
+```
+
 Run emma
 
 ```
