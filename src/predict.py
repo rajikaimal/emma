@@ -7,8 +7,6 @@ import csv
 from sklearn import svm
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.feature_extraction import FeatureHasher
-from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction import DictVectorizer
 
 
@@ -36,7 +34,7 @@ class Predict:
 					if idx == 0:
 						train_data['file'] = row[idx]
 					if idx == 1:
-						train_data['line'] = row[idx]
+						train_data['line'] = int(row[idx])
 					if idx == 2:
 						train_data['timestamp'] = row[idx]
 					if idx == 3:
@@ -49,30 +47,24 @@ class Predict:
 				train_data = dict()
 				train_data_labels = list()
 
-			# C = 0.8
-
-			dict_vectorizer = DictVectorizer()
+			C = 0.8
+			dict_vectorizer = DictVectorizer(sparse=False)
 			train_data_trasformed = dict_vectorizer.fit_transform(train_data_list)
-			test_vector_transformed = dict_vectorizer.transform([{'file': 'AWS_SETUP', 'line': '1', 'timestamp': '2017-02-28T14:08:52-0500'}])
-			# print(b)
+			test_vector_transformed = dict_vectorizer.transform(test_vector)
 
-			# h = FeatureHasher()
-			# b = h.fit_transform(train_data_list)
-			# test_vector_sec = h.transform([{'file': 'components', 'line': '0', 'timestamp': '2016-12-19T21:23:20+0518'}])
-			print('--------------')
-			# print(test_vector_sec)
+			# print(dict_vectorizer.get_feature_names())
+			# print(dict_vectorizer.inverse_transform(train_data_trasformed))
+
+			# print('Inverse transformation !!!')
+			# print(test_vector)
+			# inv_trans = dict_vectorizer.inverse_transform(test_vector_transformed)
 
 			# fit LinearSVC
 			# multi label binarizer to convert iterable of iterables into processing format
 			mlb = MultiLabelBinarizer()
 			y_enc = mlb.fit_transform(train_data_labels_list)
-			# train_vector = svm.LinearSVC(C=C)
-			# # print(x.shape)
 
 			train_vector = OneVsRestClassifier(svm.SVC(probability=True))
-			# train_vector = svm.SVC(C=1.0, tol=1e-10, kernel='rbf', gamma=1e-8,  class_weight='auto')
-			# train_vector = OneVsRestClassifier(MultinomialNB())
-			# train_vector = svm.SVC(kernel='linear')
 			classifier_rbf = train_vector.fit(train_data_trasformed, y_enc)
 
 			# test_vecc = cnt_vectorizer.fit_transform(X[:, 0])
@@ -82,10 +74,23 @@ class Predict:
 
 
 			print("Predicted usernames: \n")
-			print(prediction)
-			print(mlb.inverse_transform(prediction))
+			# print(prediction)
+			# print(mlb.inverse_transform(prediction))
 
-			# return mlb.inverse_transform(prediction)
+			users = self.parse_prediction(mlb.inverse_transform(prediction))
+			print(users)
+			return users
+
+	def parse_prediction(self, predictions):
+		"""
+		Transform list of tuples to list of predicted users
+		"""
+		users = list()
+		for prediction in predictions:
+			users.append(prediction[0])
+			users.append(prediction[1])
+
+		return users
 
 	def visualize(self, X, y):
 		# visualize commit with ghusernames
@@ -95,5 +100,5 @@ class Predict:
 		plt.title('GitHub PR reviewer selection')
 		plt.show()
 
-pr = Predict()
-pr.train(np.array([1, 2, 3, 3, 3, 4, 4]))
+# pr = Predict()
+# pr.train([{'file': 'package', 'line': 31, 'timestamp': '2017-01-16T23:57:20-0600'}])
