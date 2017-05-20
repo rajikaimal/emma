@@ -1,4 +1,5 @@
 Flask==0.12
+GitPython==1.7
 pandas
 NumPy==1.6.1
 SciPy==0.9
