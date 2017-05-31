@@ -2,6 +2,20 @@
 
 > WIP !!!
 
+:santa: Intelligent mention bot for GitHub organizations
+
+## Install
+
+```
+$ pip3 install -r requirements.txt
+```
+
+## Deploy
+
+```
+$ sh deploy.sh [provider]
+```
+
 ## Developement setup
 
 ### Setup ngrok
