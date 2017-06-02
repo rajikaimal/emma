@@ -13,7 +13,6 @@ from flask import Flask, request, abort, jsonify
 from extract import Extract
 from predict import Predict
 
-
 app = Flask(__name__)
 logging.basicConfig(filename='src/logs/emma.log',level=logging.DEBUG)
 
@@ -21,7 +20,9 @@ logging.basicConfig(filename='src/logs/emma.log',level=logging.DEBUG)
 def payload():
     json_payload = json.loads(request.form['payload'])
 
-    if json_payload['action'] != 'opened':
+    print("requested !!!")
+
+    if json_payload['action'] == 'opened' or json_payload['action'] == 'reopened':
         extr = Extract()
         # to be used 
         # pr_diff_url = json_payload['pull_request']['diff_url']
@@ -45,26 +46,38 @@ def payload():
                     'line': deleted_line,
                     'timestamp': timestamp
                 }
-                predictions.append([prdt.train(test_dict)])
-
-        print('Predictions !!!')
-        print(predictions)
+                for users in prdt.train(test_dict):
+                    predictions.append(users)
 
         logging.info('Prediction' + str(predictions))
 
         credentials = config.read_credentials()
         repo_details = config.read_repo()
 
-        g = Github(credentials.username, credentials.password)
-        org = g.get_organization(repo_details.org)
-        repo = org.get_repo(repo_details.repo)
+        g = Github(credentials['username'], credentials['password'])
+        org = g.get_organization(repo_details['org'])
+        repo = org.get_repo(repo_details['repo'])
 
-        issue = repo.get_issue(1)
-        # pr = repo.get_pull(1)
-        # pr.create_comment()
-        issue.create_comment('Hi, thanks for the PR, according to the analysis I\'ve found out that :tada:' + str(predictions))
+        issue = repo.get_issue(5)
 
+        usernames = list()
+
+        cln_predictions = list(set(predictions))
+
+        for cln_prediction in cln_predictions:
+            r = requests.get('https://api.github.com/search/users?q=' + cln_prediction + ' in:email', auth=(credentials['username'], credentials['password']))
+            usernames.append(r.json()['items'][0]['login'])
+
+        message = "Thanks for the PR, according to the analysis I\'ve found out that "
+        for user in usernames:
+            message += "@" + user + ", "
+        message += "to be potential reviewers :tada:"
+        
+        issue.create_comment(message)
         return app.response_class(['POSTED', 'PR/ISSUE'], content_type='application/json')
+    else:
+        # not interested in any other events
+        return app.response_class(['NOT POSTED', 'PR/ISSUE'], content_type='application/json')    
 
 if __name__ == "__main__":
     try:

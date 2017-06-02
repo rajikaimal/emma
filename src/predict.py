@@ -86,10 +86,11 @@ class Predict:
 		Transform list of tuples to list of predicted users
 		"""
 		users = list()
+		print(predictions)
 		for prediction in predictions:
-			users.append(prediction[0])
-			users.append(prediction[1])
-
+			for email in prediction:
+				users.append(email)
+				
 		return users
 
 	def visualize(self, X, y):

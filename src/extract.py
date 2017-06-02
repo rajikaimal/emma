@@ -53,7 +53,8 @@ class Extract:
 			# 	print(parsed_diff)
 
 # ex = Extract()
-# # exxx = ex.get_parsed_diff('/home/rajika/projects/npm-checker')
+# ex.clone_repo("https://github.com/claireorg/sample", "/home/rajika/Desktop/test")
+# exxx = ex.get_parsed_diff('/home/rajika/projects/sample')
 # # print(exxx)
 # parsed_diff = ex.get_pr_diff('https://patch-diff.githubusercontent.com/raw/facebook/react/pull/3.diff')
 # # print(parsed_diff)
