@@ -33,10 +33,19 @@ class Extract:
 			    #    		for file_name in value:
 			    #    			# print('writing')
 				
-				if(prev_commiter == None):
-					writer.writerow([diff_info['file_name'], diff_info['lines'], diff_info['timestamp'], diff_info['author'], diff_info['author']])
-				else:
-					writer.writerow([diff_info['file_name'], diff_info['lines'], diff_info['timestamp'], diff_info['author'], prev_commiter])
+				for deleted_lines in diff_info['deleted_lines']:
+					if(prev_commiter == None):
+						writer.writerow([diff_info['file_name'], deleted_lines, diff_info['timestamp'], diff_info['author'], diff_info['author']])
+					else:
+						writer.writerow([diff_info['file_name'], deleted_lines, diff_info['timestamp'], diff_info['author'], prev_commiter])					
+
+
+				for added_lines in diff_info['added_lines']:
+					if(prev_commiter == None):
+						writer.writerow([diff_info['file_name'], added_lines, diff_info['timestamp'], diff_info['author'], diff_info['author']])
+					else:
+						writer.writerow([diff_info['file_name'], added_lines, diff_info['timestamp'], diff_info['author'], prev_commiter])					
+
 
 				prev_commiter = diff_info['author']
 	
@@ -54,7 +63,7 @@ class Extract:
 
 # ex = Extract()
 # ex.clone_repo("https://github.com/claireorg/sample", "/home/rajika/Desktop/test")
-# exxx = ex.get_parsed_diff('/home/rajika/projects/sample')
+# exxx = ex.get_parsed_diff('/home/rajika/test-repo')
 # # print(exxx)
 # parsed_diff = ex.get_pr_diff('https://patch-diff.githubusercontent.com/raw/facebook/react/pull/3.diff')
 # # print(parsed_diff)
