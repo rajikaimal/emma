@@ -16,19 +16,20 @@ from predict import Predict
 app = Flask(__name__)
 logging.basicConfig(filename='src/logs/emma.log',level=logging.DEBUG)
 
+print("Running ...")
+
 @app.route("/payload", methods=["POST"])
 def payload():
     json_payload = json.loads(request.form['payload'])
 
-    print("requested !!!")
+    print("requested !!!!")
 
     if json_payload['action'] == 'opened' or json_payload['action'] == 'reopened':
         extr = Extract()
-        # to be used 
-        # pr_diff_url = json_payload['pull_request']['diff_url']
-        parsed_diff = extr.get_pr_diff('https://patch-diff.githubusercontent.com/raw/facebook/react/pull/3.diff')
-        # parsed_diff = extr.get_pr_diff(pr_diff_url)
+        pr_diff_url = json_payload['pull_request']['diff_url']
+        parsed_diff = extr.get_pr_diff(pr_diff_url)
 
+        print(parsed_diff)
         predictions = []
         prdt = Predict()
         
@@ -58,7 +59,8 @@ def payload():
         org = g.get_organization(repo_details['org'])
         repo = org.get_repo(repo_details['repo'])
 
-        issue = repo.get_issue(5)
+        print(json_payload['pull_request']['number'])
+        issue = repo.get_issue(int(json_payload['pull_request']['number']))
 
         usernames = list()
 
@@ -71,10 +73,14 @@ def payload():
         message = "Thanks for the PR, according to the analysis I\'ve found out that "
         for user in usernames:
             message += "@" + user + ", "
-        message += "to be potential reviewers :tada:"
+        message += "to be (a) potential reviewer(s) :tada:"
         
         issue.create_comment(message)
+        print("Done posting ...")
         return app.response_class(['POSTED', 'PR/ISSUE'], content_type='application/json')
+    # if json_payload['action'] == 'closed' and json_payload['pull_request']['merged_at'] is not "null":
+    #     print("merged")
+
     else:
         # not interested in any other events
         return app.response_class(['NOT POSTED', 'PR/ISSUE'], content_type='application/json')    

@@ -113,7 +113,7 @@ class Parser:
             # print(">>>>>> LINE"  + line + "line number " + str(current_line))
             temp_count = temp_count + 1
 
-            if(line.startswith('diff --git')):
+            if(line.startswith('diff --git ')):
                 is_diff = False
                 # last_deleted_line = 0
                 glob_from_line = 0
@@ -122,18 +122,16 @@ class Parser:
                 glob_from_line = 0
                 continue
             if(line.startswith('---')):
-                # >>>>>>>>>>>>>>>>>> todo match rest of the string eg : /src/index.js
-                re_compile = re.compile('--- a/(\w+)')
+                re_compile = re.compile('--- a/(\w+)?')
                 matches = re_compile.findall(line)
+                str_split = line.split('--- a/');
 
-                for file_name_match in matches:
+                for file_name_match in str_split:
                     file_names.append(file_name_match)
-                    # print('New file !')
                     diffs_data.append({
                         'file_name': file_name_match,
                         'added_lines': [],
-                        'deleted_lines': [],
-                        'modified_lines': []
+                        'deleted_lines': []
                     })
 
                     current_file = file_name_match
@@ -150,17 +148,19 @@ class Parser:
                 from_count = matches[0][1]
                 to_line = matches[0][2]
                 to_count = matches[0][3]
-                current_line += 1
+                # set count start from diff
+                current_line = int(from_line)
 
                 continue
-                # check for deleted lines
+
+            # check for deleted lines
             if(line.startswith('-') and not line.startswith('---')):
                 last_deleted_line += 1
                 # if file_name_match in file_names:
                 for diffy in diffs_data:
                     if diffy['file_name'] == current_file:
                         # print('incrementing adding' + str(current_line) + "<><> LINE"  + line + "line number " + str(current_line))
-                        diffy['added_lines'].append(current_line)
+                        diffy['deleted_lines'].append(current_line)
                         # print('hit added')
                         # print(current_line)
                     # to be removed
@@ -174,23 +174,14 @@ class Parser:
                 # if file_name_match in file_names:
                 for diffy in diffs_data:
                     if diffy['file_name'] == current_file:
-                        print("incrementing adding" + str(current_line) + "<><> LINE"  + line + "line number " + str(current_line))
-                        diffy['deleted_lines'].append(current_line)
-                # else:
-                #     deleted_lines.append(glob_from_line)
-                # added_lines.append(glob_from_line)
+                        # print("incrementing adding" + str(current_line) + "<><> LINE"  + line + "line number " + str(current_line))
+                        diffy['added_lines'].append(current_line)
+
                 current_line += 1
                 continue
             if(line.startswith(" ")):
                 current_line += 1
 
-            if current_line is not 0:
-                for diffy in diffs_data:
-                    if(from_line == to_line and from_count == to_count):
-                            if diffy['file_name'] == current_file:
-                                diffy['modified_lines'].append(current_line)
-                
-            # current_line += 1
             glob_from_line += 1
 
         return diffs_data

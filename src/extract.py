@@ -24,7 +24,6 @@ class Extract:
 		for diff_info in parser.parse_diff(repo_path):
 			# print(diff_info)
 			if not 'file_name' in diff_info:
-				print('Nope !')
 				continue
 			with open(full_path + '/data/train_emma.csv', 'a') as csv_file:
 				writer = csv.writer(csv_file)
@@ -53,7 +52,6 @@ class Extract:
 		if pr_diff_url:
 			r = requests.get(pr_diff_url)
 			raw_diff = r.content.decode("utf-8")
-			parser = Parser()
 			parser = Parser()
 			parsed_diff = parser.parse_raw_diff(raw_diff)
 			# print(parsed_diff)
